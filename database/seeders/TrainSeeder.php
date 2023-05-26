@@ -23,8 +23,8 @@ class TrainSeeder extends Seeder
             $train->company = $faker->randomElement(['Trenitalia', 'Italo']);
             $train->start_station = $faker->city();
             $train->arrive_station = $faker->city();
-            $train->start_time = $faker->time();
-            $train->arrive_time = $faker->time();
+            $train->start_time = $faker->time('H:i');
+            $train->arrive_time = $faker->time('H:i');
             $train->coaches_no = $faker->numberBetween(1, 9);
             $train->on_time = $faker->boolean();
             $train->cancelled = $faker->boolean();
